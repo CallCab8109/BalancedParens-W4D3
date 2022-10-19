@@ -9,11 +9,13 @@ function countString(str) {
     let count = 0
     let count2 = 0
     for(let i = 0; i < str.length; i++) {
+        if (count > count2) return false
         if (str.charAt(i) == ")") {
             count += 1
         }
     }
     for(let i = 0; i < str.length; i++) {
+        if (count > count2) return false
         if (str.charAt(i) == "(") {
             count2 += 1
         }
